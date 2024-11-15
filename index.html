@@ -223,19 +223,24 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contact <span>Me!</span></h2>
 
-        <form action="https://formsubmit.co/alunogustavodias@gmail.com" method="post">
+        <form action="https://formsubmit.co/alunogustavodias@gmail.com" method="POST">
             <div class="input-box">
-                <input type="text" placeholder="Full Name">
-                <input type="email" placeholder="Email Address">
+                <input type="text" name="nome"  placeholder="Nome Completo" required >
+                <input type="email" name="email"  placeholder="Endereço de E-mail" required >
             </div><!--input-box-->
-
+        
             <div class="input-box">
-                <input type="number" placeholder="Mobile Number">
-                <input type="text" placeholder="Email Subject">
+                <input type="tel"  name="telefone"  placeholder="Número de Celular" required >
+                <input type="text" name="assunto" placeholder="Assunto do E-mail" required >
             </div><!--input-box-->
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message..."></textarea>
-            <input type="submit" value="Send Mesaage" class="btn">
+            
+            <textarea name="message" id="" cols="30" rows="10" placeholder="Sua Mensagem..." required></textarea>
+            
+            <button type="submit" class="btn">
+                <i class="bi bi-send"></i> Enviar Mensagem
+            </button>
         </form><!--form-->
+        
     </section><!--contact-->
 
 
@@ -266,6 +271,10 @@
     </footer>
 
 
+
+
+
+    
     <!-- SCROLL REVEAL -->
     <script src="https://unpkg.com/scrollreveal"></script>
 
