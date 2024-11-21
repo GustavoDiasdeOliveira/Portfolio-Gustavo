@@ -75,6 +75,12 @@ span {
     display: none;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
 .indicator {
     position: absolute;
     height: 4px;
@@ -89,7 +95,7 @@ span {
     color: rgb(75, 75, 75);
     text-decoration: none;
     font-weight: 500;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 .navbar a.active,
@@ -97,100 +103,61 @@ span {
     color: #00bfff;
 }
 
-
-
-/* ESTILO LANGUAGE */
-.language {
+/* Dropdown */
+.dropdown {
     position: relative;
-    width: 120px;
-    font-weight: bold;
-    margin-left: -15px;
+    display: inline-block;
 }
 
-.language-selected {
-    font-size: 20px;
-    margin-left: 50px;
+.dropdown-btn {
+    font-size: 1.7rem;
+    color: rgb(75, 75, 75);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 4rem;
+}
+
+.dropdown-btn:hover {
+    color: #00bfff;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 10rem;
+    margin-left: 25px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    line-height: 0;
+}
+
+.dropdown-item {
     display: flex;
     align-items: center;
-    color: #fff;
-    cursor: pointer;
+    justify-content: center;
+    flex-direction: column; /* Para alinhar texto abaixo da imagem */
+    padding: 1rem;
+    margin: -5px;
+    text-align: center;
 }
 
-.language-selected:before {
-    content: '';
-    display: inline-block;
-    width: 30px;
-    height: 20px;
-    background-image: url(https://flagcdn.com/w320/us.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin-right: 10px;
+.dropdown-item img {
+    width: 40px;
+    margin: 3px;
+    transition: .4s ease;
 }
 
-.language-selected.change-br:before {
-    background-image: url(https://flagcdn.com/w320/br.png);
+.dropdown-item img:hover {
+    transform: scale(1.2);
 }
 
-.language-selected.change-en:before {
-    background-image: url(https://flagcdn.com/w320/us.png);
-}
-
-.language-selected.change-es:before {
-    background-image: url(https://flagcdn.com/w320/es.png);
-}
-
-
-.language ul {
-    position: absolute;
-    width: 140px;
-    background-color: #fff;
-    border: 1px solid #f8f8f8;
-    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.5);
-    display: none;
-    margin-left: 20px;
-}
-
-.language ul li {
-    list-style: none;
-}
-
-.language ul li a {
-    display: block;
-    color: #252525;
-    padding: 5px 1px;
-    margin-left: 25px;
-}
-
-.language ul li:hover {
-    background-color: #e4e4e4;
-}
-
-.language ul li a:before {
-    content: '';
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    vertical-align: middle;
-    margin-right: 10px;
-}
-
-a.br:before {
-    background-image: url(https://flagsapi.com/BR/flat/64.png);
-}
-
-a.en:before {
-    background-image: url(https://flagsapi.com/US/flat/64.png);
-}
-
-a.es:before {
-    background-image: url(https://flagsapi.com/ES/flat/64.png);
-}
-
-.language:hover ul {
+.dropdown:hover .dropdown-content {
     display: block;
 }
+
 
 /* FIM ESTILO LANGUAGE*/
 
@@ -761,6 +728,20 @@ footer .social-media {
 
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .dropdown-content {
+        margin-left: 0px;
+    }
+
+    .dropdown-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; /* Para alinhar texto abaixo da imagem */
+        padding: 1rem;
+        margin: -25px;
+        text-align: center;
     }
 }
 
