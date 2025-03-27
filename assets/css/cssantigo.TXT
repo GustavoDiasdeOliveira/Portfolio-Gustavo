@@ -12,8 +12,8 @@
 }
 
 :root {
-    --bg-color: #0C1022;
-    --second-bg-color: #171b2c;
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
     --text-color: #fff;
     --main-color: #0ef;
     --main2-color: #00bfff;
@@ -49,7 +49,7 @@ section {
     width: 100%;
     padding: 1rem 9%;
     display: flex;
-    background: #0C1022;
+    background: var(--bg-color);
     box-shadow: 2px 1px 1px rgb(255, 255, 255);
     justify-content: space-between;
     align-items: center;
@@ -369,12 +369,12 @@ span {
 
 .logos:before {
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), #171b2c);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #323946);
 }
 
 .logos:after {
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #171b2c);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #323946);
 }
 
 .logos:hover .logos-slide {
@@ -795,4 +795,3 @@ footer .social-media {
         text-align: center;
     }
 }
-
